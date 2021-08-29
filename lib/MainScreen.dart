@@ -33,6 +33,7 @@ class _MainScreenState extends State<MainScreen> {
       MediaQuery.of(context).size.width,
       MediaQuery.of(context).size.height
     ];
+    double weightAgeFontSize = screenSize[1] * 0.05;
     return Scaffold(
         appBar: AppBar(
           title: Text(
@@ -75,8 +76,8 @@ class _MainScreenState extends State<MainScreen> {
                                     image: AssetImage(
                                       "assets/images/gender_male.png",
                                     ),
-                                    width: 100,
-                                    height: 100,
+                                    width: screenSize[1] * 0.1,
+                                    height: screenSize[1] * 0.1,
                                   ),
                                   Text(
                                     "MALE",
@@ -122,8 +123,8 @@ class _MainScreenState extends State<MainScreen> {
                                     image: AssetImage(
                                       "assets/images/gender_female.png",
                                     ),
-                                    width: 100,
-                                    height: 100,
+                                    width: screenSize[1] * 0.1,
+                                    height: screenSize[1] * 0.1,
                                   ),
                                   Text(
                                     "FEMALE",
@@ -156,7 +157,7 @@ class _MainScreenState extends State<MainScreen> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           Padding(
-                            padding: EdgeInsets.fromLTRB(0, 15, 0, 0),
+                            padding: EdgeInsets.fromLTRB(0, screenSize[1]*0.02, 0, 0),
                             child: Text(
                               "HEIGHT $_currentHeight cm",
                               style: TextStyle(
@@ -255,10 +256,12 @@ class _MainScreenState extends State<MainScreen> {
                                                 "-",
                                                 style: TextStyle(
                                                   color: Colors.white,
-                                                  fontSize: 25,
+                                                  fontSize: weightAgeFontSize,
                                                 ),
                                               ),
-                                            ))),
+                                            )
+                                            )
+                                        ),
                                       ),
                                     )),
                                     Flexible(
@@ -297,7 +300,7 @@ class _MainScreenState extends State<MainScreen> {
                                                 "+",
                                                 style: TextStyle(
                                                   color: Colors.white,
-                                                  fontSize: 25,
+                                                  fontSize: weightAgeFontSize,
                                                 ),
                                               ),
                                             ))),
@@ -383,7 +386,7 @@ class _MainScreenState extends State<MainScreen> {
                                                 "-",
                                                 style: TextStyle(
                                                   color: Colors.white,
-                                                  fontSize: 25,
+                                                  fontSize: weightAgeFontSize,
                                                 ),
                                               ),
                                             ))),
@@ -425,7 +428,7 @@ class _MainScreenState extends State<MainScreen> {
                                                 "+",
                                                 style: TextStyle(
                                                   color: Colors.white,
-                                                  fontSize: 25,
+                                                  fontSize: weightAgeFontSize,
                                                 ),
                                               ),
                                             ))),
